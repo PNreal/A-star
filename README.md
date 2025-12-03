@@ -26,6 +26,20 @@ Dự án là một ứng dụng web mô phỏng chức năng tìm đường đi 
 
 ## 2. Demo Ứng Dụng
 
+### Video Demo
+
+Xem video demo để hiểu rõ hơn về cách sử dụng ứng dụng:
+
+[![Video Demo](https://img.shields.io/badge/Video-Demo-red)](video_2025-12-02_08-55-56.mp4)
+
+**Xem video demo**: [video_2025-12-02_08-55-56.mp4](video_2025-12-02_08-55-56.mp4)
+
+Video demo này sẽ hướng dẫn bạn:
+- Cách chọn điểm bắt đầu và điểm kết thúc trên bản đồ
+- Cách sử dụng các thuật toán tìm đường khác nhau
+- Cách so sánh hiệu suất các thuật toán
+- Các tính năng chính của ứng dụng
+
 ### Giao Diện Chính
 
 ![Giao diện ứng dụng](Screenshot%202025-12-04%20003819.png)
