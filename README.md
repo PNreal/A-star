@@ -41,8 +41,8 @@ Cách này đơn giản nhất, chỉ yêu cầu máy tính của bạn đã cà
 1.  **Clone dự án và di chuyển vào thư mục gốc:**
 
     ```bash
-    git clone https://github.com/ducanh2006/AI-project-2025.1.git
-    cd AI-project-2025.1
+    git clone https://github.com/PNreal/A-star.git
+    cd A-star
     ```
 
 2.  **Khởi động các dịch vụ bằng Docker Compose:**
@@ -64,7 +64,7 @@ Cách này đơn giản nhất, chỉ yêu cầu máy tính của bạn đã cà
 
 Cách này yêu cầu máy tính của bạn đã cài đặt **Python** (phiên bản 3.12 hoặc tương đương) và **Node.js** (phiên bản 20.x hoặc tương đương).
 
-#### 3.2.1. Khởi chạy Backend (FastAPI - Cổng 3000)
+#### 3.1. Khởi chạy Backend (FastAPI - Cổng 3000)
 
 1.  **Di chuyển vào thư mục Backend:**
 
@@ -87,7 +87,7 @@ Cách này yêu cầu máy tính của bạn đã cài đặt **Python** (phiên
 
     Server Backend sẽ chạy tại **`http://localhost:3000`**.
 
-#### 3.2.2. Khởi chạy Frontend (React/Vite - Cổng 5173)
+#### 3.2. Khởi chạy Frontend (React/Vite - Cổng 5173)
 
 1.  **Di chuyển vào thư mục Frontend:**
 
@@ -115,3 +115,22 @@ Cách này yêu cầu máy tính của bạn đã cài đặt **Python** (phiên
     Mở trình duyệt và truy cập vào địa chỉ:
     **`http://localhost:5173`**
     *(Lưu ý: Cả Backend và Frontend phải đang chạy đồng thời để ứng dụng hoạt động.)*
+
+-----
+
+## 4\. Tài Liệu Kỹ Thuật
+
+Để tìm hiểu chi tiết về cách triển khai các thuật toán và kiến trúc hệ thống, vui lòng xem:
+
+- **[Tài Liệu Triển Khai Thuật Toán](./docs/algorithm_implementation.md)**: Tài liệu chi tiết về:
+  - Cách triển khai các thuật toán (Dijkstra, A*, BFS, DFS)
+  - Xây dựng đồ thị từ dữ liệu OpenStreetMap
+  - Tìm điểm gần nhất trên đồ thị
+  - So sánh và đánh giá hiệu suất các thuật toán
+  - Tối ưu hóa và best practices
+
+- **[API Specification](./docs/api_spec.md)**: Tài liệu chi tiết về:
+  - Các endpoints API
+  - Request/Response format
+  - Error handling
+  - Ví dụ sử dụng với các ngôn ngữ khác nhau
