@@ -1,9 +1,11 @@
 .algorithm-info-container {
   width: 100%;
-  min-height: 100vh;
+  flex: 1;
+  height: 0; /* Important for flexbox scrolling */
   background: var(--vscode-background);
   padding: 2rem;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .info-header {

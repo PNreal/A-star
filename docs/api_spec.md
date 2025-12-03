@@ -40,18 +40,18 @@ http://localhost:3000
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
-| `start` | Object | ✅ | Điểm bắt đầu |
-| `start.lat` | Float | ✅ | Vĩ độ điểm bắt đầu |
-| `start.lng` | Float | ✅ | Kinh độ điểm bắt đầu |
-| `end` | Object | ✅ | Điểm kết thúc |
-| `end.lat` | Float | ✅ | Vĩ độ điểm kết thúc |
-| `end.lng` | Float | ✅ | Kinh độ điểm kết thúc |
-| `bbox` | Object | ✅ | Bounding box chứa vùng cần lấy dữ liệu |
-| `bbox.north` | Float | ✅ | Vĩ độ phía Bắc |
-| `bbox.south` | Float | ✅ | Vĩ độ phía Nam |
-| `bbox.east` | Float | ✅ | Kinh độ phía Đông |
-| `bbox.west` | Float | ✅ | Kinh độ phía Tây |
-| `algorithm` | String | ❌ | Thuật toán sử dụng. Mặc định: `"dijkstra"` |
+| `start` | Object | Có | Điểm bắt đầu |
+| `start.lat` | Float | Có | Vĩ độ điểm bắt đầu |
+| `start.lng` | Float | Có | Kinh độ điểm bắt đầu |
+| `end` | Object | Có | Điểm kết thúc |
+| `end.lat` | Float | Có | Vĩ độ điểm kết thúc |
+| `end.lng` | Float | Có | Kinh độ điểm kết thúc |
+| `bbox` | Object | Có | Bounding box chứa vùng cần lấy dữ liệu |
+| `bbox.north` | Float | Có | Vĩ độ phía Bắc |
+| `bbox.south` | Float | Có | Vĩ độ phía Nam |
+| `bbox.east` | Float | Có | Kinh độ phía Đông |
+| `bbox.west` | Float | Có | Kinh độ phía Tây |
+| `algorithm` | String | Không | Thuật toán sử dụng. Mặc định: `"dijkstra"` |
 
 **Algorithm Values**:
 - `"dijkstra"` - Thuật toán Dijkstra (mặc định)
