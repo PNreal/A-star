@@ -554,10 +554,10 @@ def add_temp_node_to_graph(graph, nodes, temp_node_id, temp_lat, temp_lng, edge_
 
 | Thuật toán | Đảm bảo tối ưu | Độ phức tạp | Số node duyệt | Tốc độ | Khuyến nghị |
 |------------|----------------|-------------|---------------|--------|-------------|
-| **Dijkstra** | ✅ Có | O((V+E)log V) | Nhiều | Trung bình | ✅ Tốt |
-| **A\*** | ✅ Có | O((V+E)log V) | Ít nhất | Nhanh nhất | ✅ **Tốt nhất** |
-| **BFS** | ❌ Không | O(V+E) | Nhiều | Nhanh | ⚠️ Không khuyến nghị |
-| **DFS** | ❌ Không | O(V+E) | Rất nhiều | Chậm | ❌ Không khuyến nghị |
+| **Dijkstra** | Có | O((V+E)log V) | Nhiều | Trung bình | Tốt |
+| **A\*** | Có | O((V+E)log V) | Ít nhất | Nhanh nhất | **Tốt nhất** |
+| **BFS** | Không | O(V+E) | Nhiều | Nhanh | Không khuyến nghị |
+| **DFS** | Không | O(V+E) | Rất nhiều | Chậm | Không khuyến nghị |
 
 ### Kết Quả Thực Tế
 
@@ -584,22 +584,22 @@ Khi so sánh trên cùng một đường đi:
 
 ### Khi Nào Sử Dụng Thuật Toán Nào?
 
-#### ✅ **A\*** (Khuyến nghị)
+#### **A\*** (Khuyến nghị)
 - **Khi**: Cần đường đi ngắn nhất và tốc độ nhanh
 - **Lý do**: Kết hợp tốt nhất giữa độ chính xác và hiệu suất
 - **Ứng dụng**: Ứng dụng bản đồ thực tế, navigation apps
 
-#### ✅ **Dijkstra**
+#### **Dijkstra**
 - **Khi**: Cần đường đi ngắn nhất, không quan tâm tốc độ
 - **Lý do**: Đơn giản, dễ hiểu, đảm bảo tối ưu
 - **Ứng dụng**: Hệ thống tính toán offline, phân tích đồ thị
 
-#### ⚠️ **BFS**
+#### **BFS**
 - **Khi**: Đồ thị không có trọng số, cần đường đi có ít điểm dừng nhất
 - **Lý do**: Nhanh nhưng không đảm bảo khoảng cách ngắn nhất
 - **Ứng dụng**: Tìm đường đi trong mạng xã hội, game đơn giản
 
-#### ❌ **DFS**
+#### **DFS**
 - **Khi**: Chỉ để so sánh, không khuyến nghị cho ứng dụng thực tế
 - **Lý do**: Không đảm bảo tối ưu, chậm
 - **Ứng dụng**: Giải quyết bài toán khác (không phải tìm đường ngắn nhất)
@@ -753,10 +753,10 @@ if edge_key not in edges_set:
 
 Hệ thống này triển khai đầy đủ các thuật toán tìm đường đi ngắn nhất với:
 
-- ✅ **Độ chính xác**: Sử dụng Haversine để tính khoảng cách thực tế
-- ✅ **Hiệu suất**: Tối ưu hóa các thao tác tính toán
-- ✅ **Linh hoạt**: Hỗ trợ nhiều thuật toán để so sánh
-- ✅ **Thực tế**: Xử lý tốt các điểm không nằm trên đồ thị
+- **Độ chính xác**: Sử dụng Haversine để tính khoảng cách thực tế
+- **Hiệu suất**: Tối ưu hóa các thao tác tính toán
+- **Linh hoạt**: Hỗ trợ nhiều thuật toán để so sánh
+- **Thực tế**: Xử lý tốt các điểm không nằm trên đồ thị
 
 **Khuyến nghị**: Sử dụng **A\*** cho ứng dụng thực tế vì nó kết hợp tốt nhất giữa độ chính xác và hiệu suất.
 
