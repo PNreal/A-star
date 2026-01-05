@@ -128,11 +128,13 @@ function MapView() {
         }),
       });
 
-      if (!response.ok) {
-        throw new Error('Không thể tìm thấy đường đi');
-      }
-
       const data = await response.json();
+      
+      if (!response.ok) {
+        const errorMsg = data.detail || 'Không thể tìm thấy đường đi';
+        console.error("Backend error:", errorMsg);
+        throw new Error(errorMsg);
+      }
       
       if (data && data.path) {
         setPath(data.path);

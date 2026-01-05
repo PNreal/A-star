@@ -36,12 +36,18 @@ async def find_path(request: PathRequest):
     Returns:
         dict: {"path": [[lat, lng], ...]} - Danh sách tọa độ các điểm trên đường đi
     """
+    print(f"[DEBUG] Request: start={request.start}, end={request.end}, algo={request.algorithm}")
+    print(f"[DEBUG] BBox: {request.bbox}")
     try:
         # 1. Lấy dữ liệu OSM trong bbox
+        print("[DEBUG] Fetching OSM data...")
         osm_data = fetch_osm_data(request.bbox)
+        print(f"[DEBUG] OSM data: {len(osm_data.get('elements', []))} elements")
 
         # 2. Xây đồ thị
+        print("[DEBUG] Building graph...")
         graph, nodes = build_graph(osm_data)
+        print(f"[DEBUG] Graph: {len(graph)} nodes")
         if not nodes:
             raise HTTPException(status_code=400, detail="Không có dữ liệu đường trong vùng này")
 
