@@ -1,0 +1,22 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: map_backend
+    ports:
+      - "3000:3000"
+    restart: always
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.prod
+    container_name: map_frontend
+    ports:
+      - "80:80"
+    restart: always
+    depends_on:
+      - backend

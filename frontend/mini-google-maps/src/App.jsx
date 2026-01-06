@@ -115,7 +115,7 @@ function MapView() {
     };
 
     try {
-      const response = await fetch('http://localhost:3000/api/find-path', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/find-path`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -170,7 +170,7 @@ function MapView() {
     };
 
     try {
-      const response = await fetch('http://localhost:3000/api/compare-algorithms', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/compare-algorithms`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
